@@ -1,0 +1,78 @@
+/* https://css-tricks.com/building-css-grid-overlay/ */
+:root {
+  --grid-color: hsla(0, 75%, 75%, 0.25);
+  --grid-repeating-width: calc(100% / var(--columns));
+  --grid-column-width: calc((100% / var(--columns)) - var(--gutter));
+  --grid-background-width: calc(100% + var(--gutter));
+  --grid-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-color),
+    var(--grid-color) var(--grid-column-width),
+    transparent var(--grid-column-width),
+    transparent var(--grid-repeating-width)
+  );
+}
+
+html {
+  position: relative;
+}
+
+html::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  width: calc(100% - (2 * var(--offset)));
+  max-width: var(--max-width);
+  min-height: 100vh;
+  background-image: var(--grid-background-columns);
+  background-size: var(--grid-background-width) 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Make header text centered */
+header {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+/* Make header text centered */
+header {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex !important; /* force items into one line */
+  flex-direction: row !important; /* horizontal */
+  justify-content: center; /* center horizontally */
+  gap: 30px; /* spacing between links */
+  white-space: nowrap; /* prevents wrapping */
+}
+
+.main-nav li {
+  display: inline-block; /* ensure each <li> stays inline */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-nav a:hover {
+  color: #0077cc;
+}

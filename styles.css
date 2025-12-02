@@ -50,6 +50,10 @@ a:focus-visible {
   text-decoration: underline;
 }
 
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /* Images */
 img {
   max-width: 100%;

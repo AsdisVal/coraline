@@ -215,3 +215,106 @@ img {
   width: 100%;
   height: auto;
 }
+/* ============================
+   5a. HOME HERO ANIMATION
+   ============================ */
+
+.page-home .layout__main {
+  padding-top: 0; /* no extra padding above the hero */
+}
+
+/* Full-screen hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Image that zooms slightly */
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2); /* start a bit zoomed in */
+  animation: heroZoom 6s ease-out forwards;
+}
+
+/* Dark overlay + centered title */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent);
+  text-shadow: 0 0 18px #000;
+}
+
+/* Zoom animation: from zoomed-in to slightly less zoomed */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+/* Title starts centered, then floats upward */
+.hero__title {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent);
+  text-shadow: 0 0 18px #000;
+
+  /* Animation */
+  position: relative;
+  animation: titleRise 2.5s ease-out forwards;
+}
+
+@keyframes titleRise {
+  0% {
+    transform: translateY(0); /* center */
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-180px); /* move upward */
+    opacity: 1;
+  }
+}

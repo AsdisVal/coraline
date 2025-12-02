@@ -17,6 +17,10 @@ html {
   position: relative;
 }
 
+body {
+  font-family: 'Sedgwick Ave', cursive;
+  letter-spacing: 0.5px;
+}
 html::before {
   content: '';
 
@@ -75,4 +79,55 @@ header {
 
 .main-nav a:hover {
   color: #0077cc;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-btn {
+  width: 50px; /* adjust size to your liking */
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.nav-label {
+  position: absolute;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.main-nav a:hover .nav-btn {
+  transform: scale(1.1);
+}
+
+.main-nav a:hover .nav-label {
+  opacity: 1;
+}
+
+.hero-image {
+  max-width: 1200px; /* or whatever you want */
+  margin: 0 auto;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

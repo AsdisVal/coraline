@@ -21,6 +21,15 @@ body {
   font-family: 'Sedgwick Ave', cursive;
   letter-spacing: 0.5px;
 }
+/* Apply to whole page */
+body {
+  cursor: url('myndir/sewing-needle-png-25.png') 16 16, auto;
+}
+
+/* Optional: different cursor on links */
+a {
+  cursor: url('myndir/sewing-needle-png-25.png') 16 16, pointer;
+}
 html::before {
   content: '';
 
@@ -130,4 +139,17 @@ header {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.svids_wrapper {
+  background-color: rgb(225, 219, 182);
+  background-color: rgb(41, 66, 88);
+}
+
+.haleita_wrapper {
+  background-color: #91b380;
+}
+
+.groteska_wrapper {
+  background-color: rgb(36, 59, 81);
 }

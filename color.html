@@ -3,40 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coraline</title>
+    <title>Coraline – Litir</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">mynd af bleiku höllinni</a></li>
-          <li><a href="fagra.html">Hið fagra</a></li>
-          <li><a href="haleita.html">Hið háleita</a></li>
-          <li><a href="groteska.html">Hið gróteska</a></li>
-          <li><a href="svidsmynd.html">Sviðsmynd</a></li>
-          <li><a href="color.html">Litir</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section id="color">
-        <p>This is the color section.</p>
+  <body class="page-color">
+    <div class="layout">
+      <header class="layout__header">
+        <h1 class="site-title">Coraline – Litir og birta</h1>
 
-        <p></p>
-      </section>
-    </main>
+        <nav class="main-nav simple-nav" aria-label="Aðalvalmynd">
+          <ul>
+            <li><a href="index.html">Heim</a></li>
+            <li><a href="fagra.html">Hið fagra</a></li>
+            <li><a href="haleita.html">Hið háleita</a></li>
+            <li><a href="groteska.html">Hið gróteska</a></li>
+            <li><a href="svidsmynd.html">Sviðsmynd</a></li>
+            <li>
+              <a href="color.html" aria-current="page">Litir</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <footer>
-      <p>
-        &copy; 2025 Fagurfræði - Birta Björnsdóttir, Hildur Margrét Bolladóttir,
-        Ósk Laufdal, Hafdís Björk Óskarsdóttir og Ásdís Valtýsdóttir
-      </p>
-    </footer>
+      <main class="layout__main">
+        <section id="color" class="content-section">
+          <h2>Litir</h2>
+
+          <p>
+            Þetta er litahlutinn — settu hvaða texta og myndir sem þú vilt hér.
+            Með þessari uppbyggingu mun síðan halda sömu skipulagi og hinu
+            síðurnar og passa fullkomlega við CSS-ið þitt.
+          </p>
+        </section>
+      </main>
+
+      <footer class="layout__footer">
+        <p>
+          &copy; 2025 Fagurfræði – Birta Björnsdóttir, Hildur Margrét
+          Bolladóttir, Ósk Laufdal, Hafdís Björk Óskarsdóttir og Ásdís
+          Valtýsdóttir
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

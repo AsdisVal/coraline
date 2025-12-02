@@ -1,48 +1,25 @@
-/* ------------------------------
-   0. CSS VARIABLES & GRID OVERLAY
-   ------------------------------ */
+/* ============================
+   1. BASIC TOKENS
+   ============================ */
 
 :root {
-  --columns: 12;
-  --gutter: 16px;
-  --offset: 16px;
-  --max-width: 1200px;
+  --max-width: 960px;
+  --page-padding: 16px;
 
-  --bg-base: #0f141a;
-  --text-color: #fafafa;
-  --accent: #f5c2e7;
+  --bg-body: #111;
+  --bg-header: #181818;
+  --bg-main: #141414;
+  --bg-footer: #181818;
+
+  --text-color: #f7f4ef;
+  --muted-text: #c7c3bc;
+
+  --accent: #f5c04f;
 }
 
-/* GRID OVERLAY (can be toggled with a class if you want later) */
-html {
-  position: relative;
-}
-
-html::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-
-  margin-inline: auto;
-  width: calc(100% - (2 * var(--offset)));
-  max-width: var(--max-width);
-  min-height: 100vh;
-
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--grid-color),
-    var(--grid-color) var(--grid-column-width),
-    transparent var(--grid-column-width),
-    transparent var(--grid-repeating-width)
-  );
-  background-size: var(--grid-background-width) 100%;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-/* ------------------------------
-   1. GLOBAL RESET & BASE STYLES
-   ------------------------------ */
+/* ============================
+   2. RESET & GLOBAL
+   ============================ */
 
 *,
 *::before,
@@ -50,100 +27,82 @@ html::before {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Sedgwick Ave', cursive;
-  letter-spacing: 0.5px;
   color: var(--text-color);
-  background-color: var(--bg-base);
-
-  /* global cursor */
-  cursor: url('myndir/sewing-needle-png-25.png') 16 16, auto;
+  background-color: var(--bg-body);
 }
 
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
-  cursor: url('myndir/sewing-needle-png-25.png') 16 16, pointer;
 }
 
-/* ------------------------------
-   2. LAYOUT WRAPPER
-   ------------------------------ */
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+   3. LAYOUT
+   ============================ */
 
 .layout {
-  min-height: 100vh;
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding-inline: 16px;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding-inline: var(--page-padding);
 
   display: flex;
   flex-direction: column;
 }
 
 .layout__header {
-  text-align: center;
   padding: 20px 0 10px;
+  text-align: center;
+  background-color: var(--bg-header);
 }
 
 .layout__main {
   flex: 1;
-  padding-bottom: 32px;
+  padding: 20px 0 32px;
+  background-color: var(--bg-main);
 }
 
 .layout__footer {
-  text-align: center;
   padding: 16px 0 24px;
+  text-align: center;
   font-size: 0.85rem;
-  opacity: 0.9;
+  color: var(--muted-text);
+  background-color: var(--bg-footer);
 }
 
-/* ------------------------------
-   3. PAGE BACKGROUNDS (WRAPPERS)
-   ------------------------------ */
-
-/* front page */
-body.page-home {
-  background: radial-gradient(
-    circle at top,
-    #2f3c52 0,
-    #0a1018 55%,
-    #05070c 100%
-  );
+/* Site title */
+.site-title {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
 }
 
-/* hið fagra */
-body.page-fagra {
-  background-color: #f5f1e3;
-}
-
-/* hið háleita */
-body.page-haleita {
-  background-color: #91b380;
-}
-
-/* hið gróteska */
-body.page-groteska {
-  background-color: #243b51;
-}
-
-/* sviðsmynd */
-body.page-svidsmynd {
-  background-color: rgb(41, 66, 88);
-}
-
-/* litir og birta */
-body.page-color {
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-}
-
-/* ------------------------------
+/* ============================
    4. NAVIGATION
-   ------------------------------ */
+   ============================ */
 
 .main-nav {
-  width: 100%;
+  margin-top: 8px;
 }
 
 .main-nav ul {
@@ -152,112 +111,103 @@ body.page-color {
   padding: 0;
 
   display: flex;
-  flex-wrap: wrap; /* lets it wrap on small screens */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 8px;
 }
 
 .main-nav li {
-  display: inline-flex;
+  margin: 0;
 }
 
 .main-nav a {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-btn {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.2s ease;
+  display: inline-block;
+  padding: 6px 14px;
   border-radius: 999px;
+  font-size: 0.95rem;
+  background-color: #222;
+  border: 1px solid transparent;
 }
 
-.nav-label {
-  position: absolute;
-  bottom: -1.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  border-color: var(--accent);
 }
 
-/* Hover effect */
-.main-nav a:hover .nav-btn {
-  transform: scale(1.1) rotate(-2deg);
+.main-nav a[aria-current='page'] {
+  background-color: var(--accent);
+  color: #111;
+  font-weight: 600;
 }
 
-.main-nav a:hover .nav-label {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
-}
-
-/* ------------------------------
+/* ============================
    5. HERO + CONTENT
-   ------------------------------ */
+   ============================ */
 
 .hero-image {
-  margin: 0 auto 24px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+  margin: 0 auto 16px;
 }
 
 .home-logo {
   display: block;
   max-width: 260px;
-  height: auto;
-  margin: 16px auto;
+  margin: 0 auto 16px;
 }
 
 .content-section {
   max-width: 720px;
   margin: 0 auto;
-  padding: 16px 20px 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.6;
   text-align: center;
 }
 
-/* ------------------------------
-   6. RESPONSIVE TWEAKS
-   ------------------------------ */
+/* ============================
+   6. RESPONSIVE
+   ============================ */
 
 @media (max-width: 600px) {
-  .nav-btn {
-    width: 42px;
-    height: 42px;
+  .layout {
+    padding-inline: 12px;
   }
 
-  .nav-label {
-    font-size: 12px;
+  .main-nav ul {
+    gap: 6px;
   }
 
-  .content-section {
-    padding-inline: 8px;
-    font-size: 0.95rem;
+  .main-nav a {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
   }
 }
 
-@media (min-width: 900px) {
-  .content-section {
-    font-size: 1.15rem;
-  }
+/* Simple row for images on content pages */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
 
-  .hero-image {
-    margin-top: 8px;
-  }
+.image-row img {
+  max-width: 100%;
+  flex: 1 1 260px;
+}
+
+.image-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
 }

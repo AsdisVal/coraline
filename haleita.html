@@ -3,21 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coraline</title>
+    <title>Coraline – Hið háleita</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
       rel="stylesheet"
     />
   </head>
-  <div class="haleita_wrapper">
-    <body>
-      <header>
-        <nav class="main-nav">
+  <body class="page-haleita">
+    <div class="layout">
+      <header class="layout__header">
+        <h1 class="site-title">Coraline – Hið háleita</h1>
+
+        <nav class="main-nav simple-nav" aria-label="Aðalvalmynd">
           <ul>
             <li><a href="index.html">Heim</a></li>
             <li><a href="fagra.html">Hið fagra</a></li>
-            <li><a href="haleita.html">Hið háleita</a></li>
+            <li>
+              <a href="haleita.html" aria-current="page">Hið háleita</a>
+            </li>
             <li><a href="groteska.html">Hið gróteska</a></li>
             <li><a href="svidsmynd.html">Sviðsmynd</a></li>
             <li><a href="color.html">Litir</a></li>
@@ -25,35 +29,49 @@
         </nav>
       </header>
 
-      <main>
-        <section id="haleita">
+      <main class="layout__main">
+        <section id="haleita" class="content-section">
           <h2>Hið háleita</h2>
+
           <p>
-            Hið háleita í Coraline birtist aðallega í hinum heiminum (e. the
-            other world.) Allt í hinum heiminum er búið til af hinni mömmunni
-            meira að segja hún sjálf er gervi. Hún gerir allt sem hún veit að
-            Coraline hefur ekki í sínum heimi. Hún ásamt hinum pabbanum veitir
-            henni mikla athygli og gefur henni gott að borða sem hljómar kannski
-            ekki svo illa en þetta gerir hún til að reyna að fá hana til þess að
-            treysta sér. Hinn heimurinn virðist kannski fallegri til að byrja
-            með en það er samt eitthvað óútskýranlega óþægilegt við hann. Það er
-            eiginlega allt óeðlilega fullkomið þar. Hinn heimurinn á sér engan
-            enda. Þegar Coraline reynir að labba út fyrir garðinn er eins og
-            heimurinn hverfi og byggist svo aftur upp í kringum hana (?) Þá er
-            hún aftur komin á byrjunarreit.
+            Hið háleita í <em>Coraline</em> birtist aðallega í hinum heiminum
+            (e. the other world). Allt í hinum heiminum er búið til af hinni
+            mömmunni — meira að segja hún sjálf er gervi. Hún gerir allt sem hún
+            veit að Coraline hefur ekki í sínum heimi. Hún ásamt hinum pabbanum
+            veitir henni mikla athygli og gefur henni gott að borða sem hljómar
+            kannski ekki svo illa, en þetta gerir hún til að reyna að fá hana
+            til þess að treysta sér.
           </p>
-          <img src="myndir\sublime\1.jpg" />
-          <img src="myndir\sublime\2.jpg" />
+
+          <p>
+            Hinn heimurinn virðist kannski fallegri til að byrja með en það er
+            samt eitthvað óútskýranlega óþægilegt við hann. Það er eiginlega
+            allt óeðlilega fullkomið þar. Hinn heimurinn á sér engan enda. Þegar
+            Coraline reynir að labba út fyrir garðinn er eins og heimurinn
+            hverfi og byggist svo aftur upp í kringum hana; þá er hún aftur
+            komin á byrjunarreit.
+          </p>
+
+          <div class="image-row">
+            <img
+              src="myndir/sublime/1.jpg"
+              alt="Hinn heimurinn í Coraline, óeðlilega fullkominn"
+            />
+            <img
+              src="myndir/sublime/2.jpg"
+              alt="Dularfull sviðsmynd úr hinum heiminum í Coraline"
+            />
+          </div>
         </section>
       </main>
 
-      <footer>
+      <footer class="layout__footer">
         <p>
-          &copy; 2025 Fagurfræði - Birta Björnsdóttir, Hildur Margrét
+          &copy; 2025 Fagurfræði – Birta Björnsdóttir, Hildur Margrét
           Bolladóttir, Ósk Laufdal, Hafdís Björk Óskarsdóttir og Ásdís
           Valtýsdóttir
         </p>
       </footer>
-    </body>
-  </div>
+    </div>
+  </body>
 </html>

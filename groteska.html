@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coraline</title>
+    <title>Coraline – Hið gróteska</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
@@ -11,24 +12,29 @@
     />
   </head>
 
-  <div class="groteska_wrapper">
-    <body>
-      <header>
-        <nav class="main-nav">
+  <body class="page-groteska">
+    <div class="layout">
+      <header class="layout__header">
+        <h1 class="site-title">Coraline – Hið gróteska</h1>
+
+        <nav class="main-nav simple-nav" aria-label="Aðalvalmynd">
           <ul>
             <li><a href="index.html">Heim</a></li>
             <li><a href="fagra.html">Hið fagra</a></li>
             <li><a href="haleita.html">Hið háleita</a></li>
-            <li><a href="groteska.html">Hið gróteska</a></li>
-            <li><a href="color.html">Sviðsmynd</a></li>
+            <li>
+              <a href="groteska.html" aria-current="page">Hið gróteska</a>
+            </li>
+            <li><a href="svidsmynd.html">Sviðsmynd</a></li>
             <li><a href="color.html">Litir</a></li>
           </ul>
         </nav>
       </header>
 
-      <main>
-        <section id="groteska">
+      <main class="layout__main">
+        <section id="groteska" class="content-section">
           <h2>Hið gróteska</h2>
+
           <p>
             Hið gróteska kemur fram í kvikmyndinni á mörgum stöðum, til að byrja
             með eru persónurnar flestar í mjög einkennilegum hlutföllum og eða
@@ -79,6 +85,13 @@
           </p>
 
           <p>
+            Eitt annað gott dæmi um gróteskt útlit eru hundarnir hjá nágrönnum
+            Coraline. Þeir líta að mestu út eins og venjulegir hundar, nema hvað
+            tennurnar þeirra eru eins og í mönnum – of stórar og of beinar fyrir
+            þá, sem gefur þeim mjög óhugnanlegt útlit.
+          </p>
+
+          <p>
             Hin mamman er aðal vondi kallinn í myndinni. Í upphafi lítur hún
             eins út og mamma Coraline, eini munurinn er að hin mamman er alltaf
             betur til höfð. Hin mamman breytist hægt og rólega út myndina og nær
@@ -93,16 +106,25 @@
             hrylling þar sem hún er ekki lengur bjöguð útgáfa af manneskju
             heldur tekur á sig alveg nýtt form.
           </p>
+
+          <div class="image-grid">
+            <img src="/myndir/grotesk/1.jpg" alt="Grótesk sena úr Coraline 1" />
+            <img src="/myndir/grotesk/2.jpg" alt="Grótesk sena úr Coraline 2" />
+            <img src="/myndir/grotesk/3.jpg" alt="Grótesk sena úr Coraline 3" />
+            <img src="/myndir/grotesk/4.jpg" alt="Grótesk sena úr Coraline 4" />
+            <img src="/myndir/grotesk/5.jpg" alt="Grótesk sena úr Coraline 5" />
+            <img src="/myndir/grotesk/6.jpg" alt="Grótesk sena úr Coraline 6" />
+          </div>
         </section>
       </main>
 
-      <footer>
+      <footer class="layout__footer">
         <p>
-          &copy; 2025 Fagurfræði - Birta Björnsdóttir, Hildur Margrét
+          &copy; 2025 Fagurfræði – Birta Björnsdóttir, Hildur Margrét
           Bolladóttir, Ósk Laufdal, Hafdís Björk Óskarsdóttir og Ásdís
           Valtýsdóttir
         </p>
       </footer>
-    </body>
-  </div>
+    </div>
+  </body>
 </html>

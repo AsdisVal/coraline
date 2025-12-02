@@ -3,60 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coraline</title>
+    <title>Coraline – Sviðsmynd</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
       rel="stylesheet"
     />
   </head>
-  <div class="svids_wrapper">
-    <body>
-      <header>
-        <nav class="main-nav">
+
+  <body class="page-svidsmynd">
+    <div class="layout">
+      <header class="layout__header">
+        <h1 class="site-title">Coraline – Sviðsmynd</h1>
+
+        <nav class="main-nav simple-nav" aria-label="Aðalvalmynd">
           <ul>
             <li><a href="index.html">Heim</a></li>
             <li><a href="fagra.html">Hið fagra</a></li>
             <li><a href="haleita.html">Hið háleita</a></li>
             <li><a href="groteska.html">Hið gróteska</a></li>
-            <li><a href="svidsmynd.html">Sviðsmynd</a></li>
+            <li>
+              <a href="svidsmynd.html" aria-current="page">Sviðsmynd</a>
+            </li>
             <li><a href="color.html">Litir</a></li>
           </ul>
         </nav>
       </header>
 
-      <main>
-        <section id="svidsmynd">
+      <main class="layout__main">
+        <section id="svidsmynd" class="content-section">
+          <h2>Sviðsmynd</h2>
+
           <p>
-            Sviðsmynd Sviðsmyndin er tvískipt á milli hversdags og hættulegrar
-            drauma veraldar. Í byrjun myndarinnar um stelpuna Coraline sést
-            gamalt hús í litlausu umhverfi. Lifandi, umbreytanlegt hús sem í
-            byrjun er sýnt sem óaðlaðandi og áhugalaust hjá íbúum sem þar búa.
-            Síðar breytist hús og umhverfið um leið og þegar þessi draumkennda
-            veröld opnast og birtist sem tákn freistinga og síðar sem ógn og er
-            leiksviðið í byrjun á þessu draumkennda heimili allt mjög
-            stíliserað, brúðulegt sem undirstrikar söguna um sjálfsmynd og
-            stjórn. Myndlíking er notuð á þessum tveimur heimilum, annars vegar
-            því húsi sem virðist vera fullkomið með fullkomna foreldra sem
-            reynast síðar vera grimmir karakterar og svo aftur á móti í byrjun
-            er húsið sýnt litlaust og óspennandi sem áhugalausir uppteknir búa í
-            en er í raun það heimili sem venjulegs fólk á heima í. Þegar
-            Coraline áttar sig á þessum mun, er eins og upprunalega heimilið og
-            veröldin í kringum hana verði bjartari og skemmtilegri og til að
-            undirstrika þessa upplifun breytist himininn í verk eftir Van Gogh
-            The Starry Night.
+            Sviðsmyndin í <em>Coraline</em> er tvískipt á milli hversdags og
+            hættulegs draumaheims. Í byrjun myndarinnar sést gamalt hús í
+            litlausu og tilbreytingarlitlu umhverfi — lifandi en kuldalegt hús
+            sem virðist áhugalaust og þungt.
           </p>
-          <p></p>
+
+          <p>
+            Þegar draumaheimurinn opnast breytist húsið og umhverfið í
+            stílfærða, bjarta og óraunverulega veröld. Það sem virðist fullkomið
+            reynist vera gervi, hannað til að tæla Coraline. Þetta stílferrar
+            tvíhyggjuna á milli raunveruleikans og blekkingar.
+          </p>
+
+          <p>
+            Þegar Coraline sér í gegnum blekkinguna verður upprunalega heimilið
+            hennar bjartara og persónulegra. Í einni dramatískri umbreytingu
+            breytist himininn yfir raunverulegum heimi í mynd sem minnir á
+            <em>The Starry Night</em> eftir Van Gogh.
+          </p>
+
+          <div class="image-row">
+            <img
+              src="/myndir/svidsmynd/1.jpg"
+              alt="Sviðsmynd úr Coraline, hinu gamla húsi"
+            />
+            <img
+              src="/myndir/svidsmynd/2.jpg"
+              alt="Sviðsmynd úr Coraline, draumaheimurinn"
+            />
+          </div>
         </section>
       </main>
 
-      <footer>
+      <footer class="layout__footer">
         <p>
-          &copy; 2025 Fagurfræði - Birta Björnsdóttir, Hildur Margrét
+          &copy; 2025 Fagurfræði – Birta Björnsdóttir, Hildur Margrét
           Bolladóttir, Ósk Laufdal, Hafdís Björk Óskarsdóttir og Ásdís
           Valtýsdóttir
         </p>
       </footer>
-    </body>
-  </div>
+    </div>
+  </body>
 </html>

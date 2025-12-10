@@ -4,7 +4,6 @@
 
 :root {
   --max-width: 1600px;
-
   --bg-body: #111848;
   --bg-header: #111848;
   --bg-main: #111848;
@@ -309,4 +308,10 @@ img {
   width: 100%;
   max-width: 100%;
   margin: 1.5rem auto;
+}
+
+.two_img {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
 }

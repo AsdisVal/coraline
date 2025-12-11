@@ -43,11 +43,6 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus-visible {
-  text-decoration: underline;
-}
-
 p {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -129,11 +124,6 @@ img {
   font-size: 0.95rem;
   background-color: #111848;
   border: 1px solid transparent;
-}
-
-.main-nav a:hover,
-.main-nav a:focus-visible {
-  border-color: var(--accent);
 }
 
 .main-nav a[aria-current='page'] {

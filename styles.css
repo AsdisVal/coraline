@@ -327,3 +327,11 @@ img {
   width: 100%;
   left: 0;
 }
+
+.video-groteska {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+}

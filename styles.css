@@ -315,3 +315,25 @@ img {
   display: inline-block;
   vertical-align: top;
 }
+.main-nav a {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after,
+.main-nav a[aria-current='page']::after {
+  width: 100%;
+  left: 0;
+}
